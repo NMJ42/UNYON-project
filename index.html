@@ -5,88 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNYON</title>
     <link rel="icon" href="images/triangles/triangleback.png">
+    <link rel="preload" as="image" href="images/logo/UNYON.png">
+    <meta property="og:title" content="UNYON - Alternative Fashion">
+    <meta property="og:description" content="Discover the mystical world of UNYON">
+    <meta property="og:image" content="https://unyon.com/preview.jpg">
+    <meta property="og:url" content="https://unyon.com">
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
+
+<body>
+    <body>
+    <!-- Background -->
+    <div class="site-background"></div>
+    <! password >
+    <div class="password-screen">
+        <div class="password-container">
+            <img src="images/logo/UNYON.png" alt="UNYON" class="password-logo">
+            <h2 class="password-title">RESTRICTED ACCESS</h2>
+            <p class="password-subtitle">Enter the code to proceed</p>
+            
+            <form class="password-form">
+                <input 
+                    type="password" 
+                    id="password-input" 
+                    class="password-input" 
+                    placeholder="••••••" 
+                    autocomplete="off"
+                    maxlength="20"
+                >
+                <button type="submit" class="password-btn">ENTER</button>
+            </form>
+            
+            <p class="password-error"></p>
+        </div>
+    </div>
+
+    
+    <div class="loader">
+        <img src="images/logo/UNYON.png" alt="Loading..." class="loader-logo">
+    </div>
+
+    
     <header class="header-hero">
         <div class="container">
-            <h1 class="title-header">UNYON</h1>
-            <div class="triangle-container">
-                <img src="images/triangles/triangleback.png" alt="unyon logo triangle" class="triangle-logo">
+            <h1 class="title-header">unYon</h1>
+            
+            
+            <nav class="main-nav">
+                <a href="galerie.html" class="nav-link">LOOKBOOK</a>
+                <a href="about.html" class="nav-link">US</a>
+                <a href="world.html" class="nav-link">WORLD</a>
+            </nav>
+        
+            <!-- Logo central -->
+            <div class="logo-container">
+                <img src="images/logo/UNYON.png" alt="unyon logo" class="logo-unyon" loading="lazy">
             </div>
-            <a href="galerie.html" class="btn-enter">ENTER</a>
+            
+            <!-- Bouton enter -->
+            <a href="galerie.html" class="btn-enter">COMING SOON ...</a>
         </div>
     </header>
 
     <main>
+        <!-- ===== cartes nav  ===== -->
         <section class="card-section">
+            <!-- Carte LOOKS GALERIE avec carousel -->
             <article class="card">
                 <h2 class="card-title">LOOKS GALERIE</h2>
                 <div class="card-image">
-                    <img src="images/look/look1a.jpg" alt="Aperçu galerie looks">
+                    <img src="images/look/look1a.jpg" alt="Look 1" loading="lazy">
+                </div>
+                <div class="carousel-dots">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
                 </div>
                 <a href="galerie.html" class="card-btn">ENTER</a>
             </article>
         
+            <!-- Carte BRAND SYMBOL -->
             <article class="card">
                 <h2 class="card-title">BRAND SYMBOL</h2>
                 <div class="card-image">
-                    <img src="images/logo/unyoncolors.jpg" alt="Symbol Unyon">
+                    <img src="images/logo/unyoncolors.jpg" alt="Symbol Unyon" loading="lazy">
                 </div>
                 <a href="about.html" class="card-btn">ABOUT UNYON</a>
             </article>
-
     
+            <!-- Carte WORLD -->
             <article class="card">
                 <h2 class="card-title">WORLD</h2>
                 <div class="card-image">
-                    <img src="images/placeholder.jpg" alt="Communauté Unyon">
+                    <img src="images/placeholder.jpg" alt="Communauté Unyon" loading="lazy">
                 </div>
                 <a href="world.html" class="card-btn">JOIN US</a>
             </article>
         </section>
     
+        <!-- ===== SECTION COLLAB ===== -->
         <section class="collab-section">
+            <!-- Photos de tenues -->
             <div class="collab-images">
-                <img src="images/placeholder.jpg" alt="Collab-1">
-                <img src="images/placeholder.jpg" alt="Collab-2">
-                <img src="images/placeholder.jpg" alt="Collab-3">
+                <img src="images/look/look1a.jpg" alt="Collab Look 1" loading="lazy">
+                <img src="images/look/look2b.jpg.jpg" alt="Collab Look 2" loading="lazy">
+                <img src="images/look/look3a.jpg" alt="Collab Look 3" loading="lazy">
             </div>
-
-        <div class="collab-info">
-            <h2 class="collab-title">COLLAB_01</h2>
-
-            <div class="carousel-navigation">
-                <div class="nav-dot"></div>
-                <div class="nav-dot"></div>
-                <div class="nav-dot"></div>
+            
+            <!-- Titre + navigation points -->
+            <div class="collab-info">
+                <h2 class="collab-title">COLLAB_01</h2>
+                
+                <div class="carousel-navigation">
+                    <div class="nav-dot"></div>
+                    <div class="nav-dot"></div>
+                    <div class="nav-dot"></div>
+                </div>
             </div>
-        </div>
         </section>
 
+        <!-- ===== SECTION BRAND STORY ===== -->
         <section class="brandstory-section">
+            <!-- Texte description -->
             <div class="brandstory-content">
                 <h2 class="brandstory-title">BRAND_STORY_01</h2>
                 <p>Lorem ipsum dolor sittum nec magna et, feugiat placerat purus. Nulla sed imperdiet leo. Etiam ac porttitor neque.</p>
             </div>
+            
+            <!-- Triangle animé -->
             <div class="brandstory-visual">
-                <img src="images/triangles/triangleback.png" alt="symbole unyon">
+                <img src="images/triangles/triangleback.png" alt="Symbole Unyon" loading="lazy">
             </div>
         </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="footer-section">
+        <!-- Logos qui défilent -->
         <div class="footer-logo">
-            <img src="images/placeholder.jpg" alt="UNYON logo variant 1">
-            <img src="images/placeholder.jpg" alt="UNYON logo variant 2">
-            <img src="images/placeholder.jpg" alt="UNYON logo variant 3">
-            <img src="images/placeholder.jpg" alt="UNYON logo variant 4">
-            <img src="images/placeholder.jpg" alt="UNYON logo variant 5">
+            <img src="images/brands/Logo 1.png" alt="UNYON logo variant 1" loading="lazy">
+            <img src="images/brands/logo 2.png" alt="UNYON logo variant 2" loading="lazy">
+            <img src="images/brands/logo 3.png" alt="UNYON logo variant 3" loading="lazy">
+            <img src="images/brands/logo 4.png" alt="UNYON logo variant 4" loading="lazy">
+            <img src="images/brands/logo 5.png" alt="UNYON logo variant 5" loading="lazy">
+            <img src="images/brands/logo 6.png" alt="UNYON logo variant 6" loading="lazy">
+            <img src="images/brands/logo 7.png" alt="UNYON logo variant 7" loading="lazy">
         </div>
-            <p class="footer-slogan">JE SUIS LE FUTUR SLOGAN</p>
-            <p class="footer-copyright">EST. 2023 | © UNYON</p>
+        
+        <!-- footer pdp -->
+        <p class="footer-slogan">JE SUIS LE FUTUR SLOGAN</p>
+        <p class="footer-copyright">EST. 2023 | © UNYON</p>
     </footer>
+
+        <script src="js/script.js"></script>
 </body>
 </html>
