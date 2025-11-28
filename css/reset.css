@@ -1,26 +1,20 @@
-/******* RESET CSS *******/
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+html {
+    scroll-behavior: smooth; 
 }
 
 img {
-    max-width: 100ù;
+    max-width: 100%;
+    height: auto;
     display: block;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-}
-
-ul {
-    list-style: none;
 }

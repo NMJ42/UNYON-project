@@ -1,0 +1,7 @@
+:root {
+    --color-bg: #1f1f1f; 
+    --color-card: #c3c3c3; 
+    --font-main: "Science Gothic", sans-serif;
+    --radius: 25px;
+    --transition: all 0.3s ease;
+}

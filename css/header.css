@@ -1,0 +1,82 @@
+/* Header commun */
+.header-hero {
+    width: 100%;
+    min-height: 20vh;
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 40px 20px;  /* ← Réduit aussi */
+}
+
+/* Headers pages secondaires */
+.galerie-header,
+.us-header,
+.world-header {
+    min-height: 8vh !important;  /* ← Encore plus petit */
+    padding: 30px 20px !important;
+}
+
+.title-header {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 28px;
+    color: var(--color-card);
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+/* Navigation */
+.main-nav {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    gap: 40px;
+    z-index: 10;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: var(--color-card);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #FFFFFF;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Responsive nav */
+@media (max-width: 1024px) {
+    .main-nav {
+        top: 80px;
+        right: 30px;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
