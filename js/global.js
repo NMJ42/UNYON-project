@@ -4,7 +4,7 @@ function initPasswordScreen() {
     const passwordInput = document.getElementById('password-input');
     const errorMsg = document.querySelector('.password-error');
     
-    const correctPassword = 'unyon2025';
+    const correctPassword = '2026';
     
     if (!passwordScreen || !passwordForm) return;
     
