@@ -1,4 +1,4 @@
-/**** PORTFOLIO****/
+/* GALERIE PAGE */
 
 .section-title {
     text-align: center;
@@ -10,7 +10,6 @@
     text-transform: uppercase;
 }
 
-/* Portfolio Section */
 .portfolio-section {
     padding: 60px 20px 100px;
     background-color: var(--color-bg);
@@ -104,7 +103,6 @@
     border-color: var(--color-bg);
 }
 
-/* Shooting Photos Section */
 .shooting-section {
     padding: 100px 20px;
     background-color: var(--color-bg);
@@ -161,17 +159,6 @@
     transform: scale(1.1);
 }
 
-.section-title {
-    text-align: center;
-    font-size: 48px;
-    font-weight: 900;
-    letter-spacing: 4px;
-    margin-bottom: 60px;
-    color: var(--color-card);
-    text-transform: uppercase;
-}
-
-/* Responsive Galerie */
 @media (max-width: 1024px) {
     .portfolio-nav.prev {
         left: 10px;
@@ -180,11 +167,109 @@
     .portfolio-nav.next {
         right: 10px;
     }
+    
+    .shooting-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
 @media (max-width: 768px) {
+    
+    .section-title {
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }
+    
+    .portfolio-section {
+        padding: 40px 15px 60px;
+    }
+    
+    .portfolio-viewer {
+        padding: 15px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+    
+    .portfolio-nav {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    .portfolio-nav.prev {
+        left: 5px;
+    }
+    
+    .portfolio-nav.next {
+        right: 5px;
+    }
+    
+    .portfolio-counter {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    .current-page {
+        font-size: 22px;
+    }
+    
+    .portfolio-dots {
+        gap: 8px;
+        margin-top: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .portfolio-dots .dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .shooting-section {
+        padding: 60px 15px;
+    }
+    
     .shooting-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 12px;
+    }
+    
+    .shooting-overlay span {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .portfolio-viewer {
+        padding: 10px;
+    }
+    
+    .portfolio-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .portfolio-counter {
+        font-size: 14px;
+    }
+    
+    .current-page {
+        font-size: 18px;
+    }
+    
+    .portfolio-dots .dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .shooting-grid {
+        gap: 10px;
     }
 }

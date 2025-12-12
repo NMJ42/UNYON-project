@@ -1,4 +1,14 @@
-/****** US ******/ 
+/* US PAGE */
+
+.section-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 60px;
+    color: var(--color-card);
+    text-transform: uppercase;
+}
 
 .us-hero {
     padding: 100px 20px;
@@ -38,7 +48,6 @@
     height: 500px;
 }
 
-/* Design Placeholder */
 .design-placeholder {
     width: 100%;
     height: 100%;
@@ -57,7 +66,6 @@
     opacity: 0.3;
 }
 
-/* Notre Histoire */
 .us-story {
     padding: 100px 20px;
     background: var(--color-card);
@@ -67,6 +75,10 @@
     max-width: 1200px;
     margin: 0 auto 80px;
     text-align: center;
+}
+
+.us-story .section-title {
+    color: var(--color-bg);
 }
 
 .us-story-text {
@@ -83,7 +95,6 @@
     color: var(--color-bg);
 }
 
-/* Timeline */
 .timeline {
     max-width: 1000px;
     margin: 0 auto;
@@ -129,7 +140,6 @@
     opacity: 0.8;
 }
 
-/* Notre Vision */
 .us-vision {
     padding: 100px 20px;
 }
@@ -168,6 +178,7 @@
 
 .value-item p {
     font-size: 15px;
+    color: var(--color-card);
     opacity: 0.7;
 }
 
@@ -175,10 +186,13 @@
     height: 600px;
 }
 
-/* Le Créateur */
 .us-creator {
     padding: 100px 20px;
     background: var(--color-card);
+}
+
+.us-creator .section-title {
+    color: var(--color-bg);
 }
 
 .us-creator-grid {
@@ -237,6 +251,7 @@
     font-weight: 700;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .social-link:hover {
@@ -245,7 +260,6 @@
     transform: translateY(-3px);
 }
 
-/* Contact */
 .us-contact {
     padding: 100px 20px;
 }
@@ -296,23 +310,6 @@
     height: 400px;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 48px;
-    font-weight: 900;
-    letter-spacing: 4px;
-    margin-bottom: 60px;
-    color: var(--color-card);
-    text-transform: uppercase;
-}
-
-.us-story .section-title,
-.us-vision .section-title,
-.us-creator .section-title,
-.us-contact .section-title {
-    text-align: center;
-}
-/* Responsive US */
 @media (max-width: 1024px) {
     .us-hero,
     .us-vision-grid,
@@ -330,5 +327,227 @@
     
     .timeline-year {
         font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .section-title {
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }
+    
+    .us-hero {
+        padding: 60px 20px;
+        gap: 40px;
+    }
+    
+    .us-hero-title {
+        font-size: 48px;
+        letter-spacing: 4px;
+    }
+    
+    .us-hero-subtitle {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    
+    .us-hero-text {
+        font-size: 15px;
+    }
+    
+    .us-hero-image {
+        height: 300px;
+    }
+    
+    .design-placeholder span {
+        font-size: 18px;
+    }
+    
+    .us-story {
+        padding: 60px 20px;
+    }
+    
+    .us-story-content {
+        margin-bottom: 50px;
+    }
+    
+    .us-story-text {
+        gap: 20px;
+    }
+    
+    .us-story-text p {
+        font-size: 15px;
+    }
+    
+    .timeline {
+        gap: 30px;
+    }
+    
+    .timeline-item {
+        grid-template-columns: 90px 1fr;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+    
+    .timeline-year {
+        font-size: 28px;
+        padding-right: 10px;
+    }
+    
+    .timeline-content h4 {
+        font-size: 18px;
+    }
+    
+    .timeline-content p {
+        font-size: 14px;
+    }
+    
+    .us-vision {
+        padding: 60px 20px;
+    }
+    
+    .us-vision-grid {
+        gap: 40px;
+    }
+    
+    .us-vision-text p {
+        font-size: 15px;
+    }
+    
+    .us-values {
+        margin-top: 30px;
+        gap: 25px;
+    }
+    
+    .value-item h4 {
+        font-size: 18px;
+    }
+    
+    .value-item p {
+        font-size: 14px;
+    }
+    
+    .us-vision-image {
+        height: 350px;
+    }
+    
+    .us-creator {
+        padding: 60px 20px;
+    }
+    
+    .us-creator-grid {
+        margin-top: 40px;
+        gap: 40px;
+    }
+    
+    .us-creator-image {
+        height: 400px;
+    }
+    
+    .creator-name {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+    
+    .creator-title {
+        font-size: 16px;
+    }
+    
+    .creator-text {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .creator-text p {
+        font-size: 14px;
+    }
+    
+    .social-link {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+    
+    .us-contact {
+        padding: 60px 20px;
+    }
+    
+    .us-contact-grid {
+        margin-top: 40px;
+        gap: 50px;
+    }
+    
+    .contact-info {
+        gap: 35px;
+    }
+    
+    .contact-item h4 {
+        font-size: 18px;
+    }
+    
+    .contact-item a,
+    .contact-item p {
+        font-size: 16px;
+    }
+    
+    .contact-design {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .us-hero {
+        padding: 40px 15px;
+    }
+    
+    .us-hero-title {
+        font-size: 36px;
+        letter-spacing: 3px;
+    }
+    
+    .us-hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .us-hero-image {
+        height: 250px;
+    }
+    
+    .timeline-item {
+        grid-template-columns: 80px 1fr;
+        gap: 15px;
+        padding: 20px 15px;
+    }
+    
+    .timeline-year {
+        font-size: 24px;
+        padding-right: 8px;
+    }
+    
+    .timeline-content h4 {
+        font-size: 16px;
+    }
+    
+    .us-vision-image {
+        height: 280px;
+    }
+    
+    .us-creator-image {
+        height: 350px;
+    }
+    
+    .creator-name {
+        font-size: 24px;
+    }
+    
+    .contact-design {
+        height: 250px;
     }
 }

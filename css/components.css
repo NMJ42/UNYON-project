@@ -1,17 +1,25 @@
+/* COMPONENTS */
+
 /* Password Screen */
 .password-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;  
-    background: var(--color-bg);
+    height: 100vh;
+    background: #1f1f1f;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100000;
+    z-index: 999999;
     opacity: 1;
     transition: opacity 0.5s ease;
+    overflow-y: auto; 
+}
+
+.password-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .password-container {
@@ -23,6 +31,8 @@
     backdrop-filter: blur(10px);
     max-width: 450px;
     width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .password-logo {
@@ -106,22 +116,131 @@
     font-weight: 700;
     letter-spacing: 1px;
     min-height: 20px;
-    animation: shake 0.5s;
 }
 
-/* Loader */
+.password-newsletter {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(195, 195, 195, 0.2);
+}
+
+.newsletter-title {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--color-card);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.newsletter-subtitle {
+    font-size: 14px;
+    color: var(--color-card);
+    opacity: 0.7;
+    margin-bottom: 25px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.newsletter-input {
+    background: rgba(195, 195, 195, 0.1);
+    border: 2px solid rgba(195, 195, 195, 0.2);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    font-size: 15px;
+    color: var(--color-card);
+    font-family: var(--font-main);
+    text-align: center;
+    transition: var(--transition);
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    opacity: 0.5;
+}
+
+.newsletter-input:focus {
+    border-color: var(--color-card);
+    background: rgba(195, 195, 195, 0.15);
+}
+
+.newsletter-btn {
+    background: var(--color-card);
+    color: var(--color-bg);
+    border: 2px solid var(--color-card);
+    border-radius: var(--radius);
+    padding: 16px 40px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-main);
+}
+
+.newsletter-btn:hover {
+    background: transparent;
+    color: var(--color-card);
+    transform: translateY(-3px);
+}
+
+.newsletter-success {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: rgba(76, 175, 80, 0.1);
+    border: 2px solid rgba(76, 175, 80, 0.5);
+    border-radius: var(--radius);
+    color: #4CAF50;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.newsletter-success.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.newsletter-count {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--color-card);
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
 .loader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: var(--color-bg);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99999;
-    transition: opacity 0.5s;
+    z-index: 100001;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.password-screen:not(.hidden) ~ .loader {
+    display: none !important;
 }
 
 .loader-logo {
@@ -129,7 +248,6 @@
     animation: pulse 2s infinite;
 }
 
-/* Scroll Progress Bar */
 .scroll-progress-bar {
     position: fixed;
     top: 0;
@@ -142,7 +260,6 @@
     box-shadow: 0 0 10px rgba(195, 195, 195, 0.5);
 }
 
-/* Lightbox */
 .lightbox {
     position: fixed;
     top: 0;
@@ -226,15 +343,14 @@
     letter-spacing: 2px;
 }
 
-/* Animations */
 @keyframes pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.03); }
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-10px); }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes shake {
@@ -243,24 +359,85 @@
     75% { transform: translateX(10px); }
 }
 
-@keyframes rainbow {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
-}
-
-/* Lightbox Responsive */
 @media (max-width: 768px) {
-    .lightbox-nav {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
+    
+    .password-screen {
+        align-items: flex-start;
+        padding: 10px 0;
+        overflow-y: auto;
     }
     
-    .lightbox-nav.prev {
-        left: 10px;
+    .password-container {
+        padding: 30px 20px;
+        width: 90%;
+        max-height: none;
+        overflow-y: visible;
+        margin: 10px auto;
     }
     
-    .lightbox-nav.next {
-        right: 10px;
+    .password-logo {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+    
+    .password-title {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+    
+    .password-subtitle {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+    
+    .password-input {
+        padding: 14px 18px;
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+    
+    .password-btn {
+        padding: 13px 28px;
+        font-size: 14px;
+    }
+    
+    .password-error {
+        margin-top: 15px;
+        font-size: 13px;
+    }
+    
+    .password-newsletter {
+        margin-top: 25px;
+        padding-top: 25px;
+    }
+    
+    .newsletter-title {
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+    
+    .newsletter-subtitle {
+        font-size: 12px;
+        margin-bottom: 18px;
+        line-height: 1.5;
+    }
+    
+    .newsletter-input,
+    .newsletter-btn {
+        padding: 13px 18px;
+        font-size: 13px;
+    }
+    
+    .newsletter-success {
+        padding: 15px;
+        margin-top: 15px;
+        font-size: 13px;
+    }
+    
+    .newsletter-count {
+        font-size: 11px;
+        margin-top: 12px;
     }
 }

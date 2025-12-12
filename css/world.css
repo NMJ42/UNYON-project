@@ -1,6 +1,15 @@
-/***** world *****:
+/* WORLD PAGE */
 
-/* Hero Section */
+.section-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 60px;
+    color: var(--color-card);
+    text-transform: uppercase;
+}
+
 .world-hero {
     padding: 100px 20px;
     text-align: center;
@@ -29,7 +38,7 @@
 }
 
 .world-news .section-title {
-    color: #1f1f1f;
+    color: var(--color-bg);
 }
 
 .news-grid {
@@ -52,6 +61,24 @@
 
 .news-image {
     height: 300px;
+}
+
+.design-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--color-card);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed var(--color-bg);
+}
+
+.design-placeholder span {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--color-bg);
+    opacity: 0.3;
 }
 
 .news-content {
@@ -81,7 +108,6 @@
     opacity: 0.8;
 }
 
-/* Collaborations */
 .world-collabs {
     padding: 100px 20px;
 }
@@ -140,14 +166,13 @@
     letter-spacing: 1px;
 }
 
-/* Événements */
 .world-events {
     padding: 100px 20px;
     background: var(--color-card);
 }
 
 .world-events .section-title {
-    color: #1f1f1f;
+    color: var(--color-bg);
 }
 
 .events-timeline {
@@ -226,7 +251,6 @@
     height: 200px;
 }
 
-/* Communauté */
 .world-community {
     padding: 100px 20px;
 }
@@ -258,7 +282,6 @@
     transform: scale(1.05);
 }
 
-/* Call to Action */
 .world-cta {
     padding: 100px 20px;
     background: var(--color-card);
@@ -277,22 +300,256 @@
     font-size: 18px;
     color: var(--color-bg);
     opacity: 0.7;
+    margin-bottom: 40px;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 48px;
-    font-weight: 900;
-    letter-spacing: 4px;
-    margin-bottom: 60px;
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-btn {
+    padding: 16px 40px;
+    background: var(--color-bg);
     color: var(--color-card);
+    border: 2px solid var(--color-bg);
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-/* Titres sections US - centrer */
-.us-story .section-title,
-.us-vision .section-title,
-.us-creator .section-title,
-.us-contact .section-title {
-    text-align: center;  /* ← Force centrage */
+.cta-btn:hover {
+    background: transparent;
+    color: var(--color-bg);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 1024px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .collabs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-item {
+        grid-template-columns: 100px 1fr 250px;
+        gap: 30px;
+        padding: 30px;
+    }
+    
+    .event-day {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .section-title {
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }
+    
+    .world-hero {
+        padding: 60px 20px;
+    }
+    
+    .world-hero-title {
+        font-size: 42px;
+        letter-spacing: 3px;
+    }
+    
+    .world-hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .world-news {
+        padding: 60px 20px;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 40px;
+    }
+    
+    .news-image {
+        height: 250px;
+    }
+    
+    .news-content {
+        padding: 25px;
+    }
+    
+    .news-title {
+        font-size: 20px;
+    }
+    
+    .news-text {
+        font-size: 14px;
+    }
+    
+    .world-collabs {
+        padding: 60px 20px;
+    }
+    
+    .collabs-grid {
+        margin-top: 40px;
+        gap: 25px;
+    }
+    
+    .collab-card {
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .collab-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .collab-info h4 {
+        font-size: 20px;
+    }
+    
+    .collab-info p {
+        font-size: 14px;
+    }
+    
+    .world-events {
+        padding: 60px 20px;
+    }
+    
+    .events-timeline {
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .event-item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+    
+    .event-date {
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 10px;
+    }
+    
+    .event-day {
+        font-size: 32px;
+    }
+    
+    .event-month {
+        font-size: 14px;
+    }
+    
+    .event-year {
+        font-size: 12px;
+    }
+    
+    .event-content h4 {
+        font-size: 20px;
+    }
+    
+    .event-location {
+        font-size: 13px;
+    }
+    
+    .event-description {
+        font-size: 14px;
+    }
+    
+    .event-image {
+        height: 180px;
+    }
+    
+    .world-community {
+        padding: 60px 20px;
+    }
+    
+    .community-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    
+    .community-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .world-cta {
+        padding: 60px 20px;
+    }
+    
+    .world-cta h3 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    
+    .world-cta p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .cta-btn {
+        padding: 14px 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .world-hero {
+        padding: 40px 15px;
+    }
+    
+    .world-hero-title {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    
+    .world-hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .news-image {
+        height: 200px;
+    }
+    
+    .collab-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .event-day {
+        font-size: 28px;
+    }
+    
+    .event-image {
+        height: 150px;
+    }
+    
+    .world-cta h3 {
+        font-size: 28px;
+    }
+    
+    .cta-btn {
+        padding: 12px 30px;
+        font-size: 13px;
+    }
 }

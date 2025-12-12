@@ -18,7 +18,6 @@
 <body>
     <div class="site-background"></div>
     
-    <!-- Header -->
     <header class="header-hero galerie-header">
         <h1 class="title-header">unYon</h1>
         
@@ -28,131 +27,131 @@
             <a href="us.html" class="nav-link">US</a>
             <a href="world.html" class="nav-link">WORLD</a>
         </nav>
+        
+        <button class="burger-menu" id="burgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
-    <!-- Portfolio -->
     <main>
         <section class="portfolio-section">
-                <h2 class="section-title">LOOKBOOK</h2>
+            <h2 class="section-title">LOOKBOOK</h2>
+            
+            <div class="portfolio-viewer">
+                <img src="images/portfolio/portfolio-1.png" 
+                    alt="Portfolio page 1" 
+                    class="portfolio-image"
+                    id="portfolioImage">
                 
-                <div class="portfolio-viewer">
-                    <img src="images/portfolio/portfolio-1.png" 
-                        alt="Portfolio page 1" 
-                        class="portfolio-image"
-                        id="portfolioImage">
-                    
-                    <button class="portfolio-nav prev" id="prevBtn">←</button>
-                    <button class="portfolio-nav next" id="nextBtn">→</button>
-                    
-                    <div class="portfolio-counter">
-                        <span class="current-page" id="currentPage">1</span> 
-                        / 
-                        <span class="total-pages" id="totalPages">9</span>
+                <button class="portfolio-nav prev" id="prevBtn">←</button>
+                <button class="portfolio-nav next" id="nextBtn">→</button>
+                
+                <div class="portfolio-counter">
+                    <span class="current-page" id="currentPage">1</span> 
+                    / 
+                    <span class="total-pages" id="totalPages">9</span>
+                </div>
+                
+                <div class="portfolio-dots" id="portfolioDots">
+                    <span class="dot active" data-page="0"></span>
+                    <span class="dot" data-page="1"></span>
+                    <span class="dot" data-page="2"></span>
+                    <span class="dot" data-page="3"></span>
+                    <span class="dot" data-page="4"></span>
+                    <span class="dot" data-page="5"></span>
+                    <span class="dot" data-page="6"></span>
+                    <span class="dot" data-page="7"></span>
+                    <span class="dot" data-page="8"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="shooting-section">
+            <h2 class="section-title">SHOOTING PHOTOS</h2>
+            
+            <div class="shooting-grid">
+                <div class="shooting-item" data-index="0">
+                    <img src="images/look/look1a.jpg" alt="Look 1a" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
                     </div>
-                    
-                    <div class="portfolio-dots" id="portfolioDots">
-                        <span class="dot active" data-page="0"></span>
-                        <span class="dot" data-page="1"></span>
-                        <span class="dot" data-page="2"></span>
-                        <span class="dot" data-page="3"></span>
-                        <span class="dot" data-page="4"></span>
-                        <span class="dot" data-page="5"></span>
-                        <span class="dot" data-page="6"></span>
-                        <span class="dot" data-page="7"></span>
-                        <span class="dot" data-page="8"></span>
+                </div>
+                
+                <div class="shooting-item" data-index="1">
+                    <img src="images/look/look1b.jpg.jpg" alt="Look 1b" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                
+                <div class="shooting-item" data-index="2">
+                    <img src="images/look/look1c.jpg.jpg" alt="Look 1c" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                
+                <div class="shooting-item" data-index="3">
+                    <img src="images/look/look2a.jpg.jpg" alt="Look 2a" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                
+                <div class="shooting-item" data-index="4">
+                    <img src="images/look/look2b.jpg.jpg" alt="Look 2b" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                
+                <div class="shooting-item" data-index="5">
+                    <img src="images/look/look2c.jpg" alt="Look 2c" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                
+                <div class="shooting-item" data-index="6">
+                    <img src="images/look/look3a.jpg" alt="Look 3a" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                
+                <div class="shooting-item" data-index="7">
+                    <img src="images/look/look3b.jpg" alt="Look 3b" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                
+                <div class="shooting-item" data-index="8">
+                    <img src="images/look/look3c.jpg.jpg" alt="Look 3c" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                
+                <div class="shooting-item" data-index="9">
+                    <img src="images/look/pdp.jpg" alt="Profile" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
+                    </div>
+                </div>
+                
+                <div class="shooting-item" data-index="10">
+                    <img src="images/look/view.jpg" alt="View" loading="lazy">
+                    <div class="shooting-overlay">
+                        <span>+</span>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-
-
-    <!-- Shooting Photos -->
-    <section class="shooting-section">
-        <h2 class="section-title">SHOOTING PHOTOS</h2>
-        
-        <div class="shooting-grid">
-            <div class="shooting-item" data-index="0">
-                <img src="images/look/look1a.jpg" alt="Look 1a" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="shooting-item" data-index="1">
-                <img src="images/look/look1b.jpg.jpg" alt="Look 1b" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="shooting-item" data-index="2">
-                <img src="images/look/look1c.jpg.jpg" alt="Look 1c" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="shooting-item" data-index="3">
-                <img src="images/look/look2a.jpg.jpg" alt="Look 2a" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="shooting-item" data-index="4">
-                <img src="images/look/look2b.jpg.jpg" alt="Look 2b" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="shooting-item" data-index="5">
-                <img src="images/look/look2c.jpg" alt="Look 2c" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="shooting-item" data-index="6">
-                <img src="images/look/look3a.jpg" alt="Look 3a" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="shooting-item" data-index="7">
-                <img src="images/look/look3b.jpg" alt="Look 3b" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="shooting-item" data-index="8">
-                <img src="images/look/look3c.jpg.jpg" alt="Look 3c" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="shooting-item" data-index="9">
-                <img src="images/look/pdp.jpg" alt="Profile" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="shooting-item" data-index="10">
-                <img src="images/look/view.jpg" alt="View" loading="lazy">
-                <div class="shooting-overlay">
-                    <span>+</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" id="lightboxClose">×</button>
         <button class="lightbox-nav prev" id="lightboxPrev">←</button>
@@ -163,22 +162,16 @@
         </div>
     </div>
 
-    <footer class="footer-section">
-    <!-- Footer -->
-    <footer class="footer-section">
-        <div class="footer-logo">
-            <img src="images/brands/Logo 1.png" alt="Brand 1" loading="lazy">
-            <img src="images/brands/logo 2.png" alt="Brand 2" loading="lazy">
-            <img src="images/brands/logo 3.png" alt="Brand 3" loading="lazy">
-            <img src="images/brands/logo 4.png" alt="Brand 4" loading="lazy">
-            <img src="images/brands/logo 5.png" alt="Brand 5" loading="lazy">
-            <img src="images/brands/logo 6.png" alt="Brand 6" loading="lazy">
-            <img src="images/brands/logo 7.png" alt="Brand 7" loading="lazy">
-        </div>
+        <footer class="footer-section">
+            <div class="footer-logo">
+                <img src="images/brands/logo1.png" alt="Brand 1" loading="lazy">
+                <img src="images/brands/logo2.png" alt="Brand 2" loading="lazy">
+                <img src="images/brands/logo3.png" alt="Brand 3" loading="lazy">
+            </div>
 
-        <p class="footer-slogan">JE SUIS LE FUTUR SLOGAN</p>
-        <p class="footer-copyright">EST. 2023 | © UNYON</p>
-    </footer>
+            <p class="footer-slogan">UNYTE DESPITE BORDERZ</p>
+            <p class="footer-copyright">EST. 2023 | © UNYON</p>
+        </footer>
 
     <script src="js/global.js"></script>
     <script src="js/galerie.js"></script>   

@@ -1,12 +1,35 @@
+/* GLOBAL */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--color-bg);
     font-family: var(--font-main);
     font-size: 16px;
     line-height: 1.6;
     color: var(--color-card);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Texture grain */
+main {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+footer {
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+}
+
 body::before {
     content: '';
     position: fixed;
@@ -17,10 +40,9 @@ body::before {
     background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="3.5" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
     opacity: 0.03;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 999;
 }
 
-/* Background artwork */
 .site-background {
     position: fixed;
     top: 0;
@@ -36,7 +58,6 @@ body::before {
     pointer-events: none;
 }
 
-/* Scroll reveal général */
 .reveal-element {
     opacity: 0;
     transform: translateY(50px);
@@ -46,4 +67,10 @@ body::before {
 .reveal-element.revealed {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
 }

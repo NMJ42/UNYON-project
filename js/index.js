@@ -1,49 +1,6 @@
 /**** PAGE HOME *****/
 
-const PASSWORD = 'UNYON2025';
-
-// Password protection
 document.addEventListener('DOMContentLoaded', () => {
-    const screen = document.querySelector('.password-screen');
-    const form = document.querySelector('.password-form');
-    const input = document.getElementById('password-input');
-    const error = document.querySelector('.password-error');
-    
-    if (screen) {
-        if (sessionStorage.getItem('unyon_access') === 'granted') {
-            screen.style.display = 'none';
-        } else {
-            document.body.style.overflow = 'hidden';
-            input.focus();
-            
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const entered = input.value.trim();
-                
-                if (entered === PASSWORD) {
-                    sessionStorage.setItem('unyon_access', 'granted');
-                    screen.style.opacity = '0';
-                    document.body.style.overflow = 'auto';
-                    setTimeout(() => screen.style.display = 'none', 500);
-                } else {
-                    error.textContent = 'ACCESS DENIED';
-                    input.value = '';
-                    setTimeout(() => error.textContent = '', 2000);
-                }
-            });
-        }
-    }
-    
-    // Loader
-    const loader = document.querySelector('.loader');
-    if (loader) {
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                loader.style.opacity = '0';
-                setTimeout(() => loader.style.display = 'none', 500);
-            }, 1000);
-        });
-    }
     
     // Scroll indicator
     const indicator = document.querySelector('.scroll-indicator');
@@ -68,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carousel LOOKS
     const card = document.querySelector('.card');
     if (card) {
-        const images = ['images/look/look1a.jpg', 'images/look/look1b.jpg.jpg', 'images/look/look2a.jpg.jpg'];
+        const images = ['images/look/look1a.jpg', 'images/look/look1b.jpg', 'images/look/look2a.jpg'];
         let currentIndex = 0;
         const img = card.querySelector('.card-image img');
         const dots = card.querySelectorAll('.carousel-dot');
@@ -227,22 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.querySelectorAll('.collab-title, .brandstory-title').forEach(el => observer.observe(el));
     
-    // Footer marquee
-    const logos = document.querySelector('.footer-logo');
-    if (logos) {
-        logos.innerHTML = logos.innerHTML + logos.innerHTML + logos.innerHTML;
-        let position = 0;
-        
-        function animate() {
-            position -= 0.5;
-            const width = logos.scrollWidth / 3;
-            if (Math.abs(position) >= width) position = 0;
-            logos.style.transform = `translateX(${position}px)`;
-            requestAnimationFrame(animate);
-        }
-        animate();
-    }
-    
     // Easter egg
     const title = document.querySelector('.title-header');
     if (title) {
@@ -260,5 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Scroll reveal
-    initScrollReveal('.card, .collab-section, .brandstory-section, .footer-section');
+    if (typeof initScrollReveal === 'function') {
+        initScrollReveal('.card, .collab-section, .brandstory-section, .footer-section');
+    }
 });
